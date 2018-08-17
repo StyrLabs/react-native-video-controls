@@ -995,7 +995,7 @@ export default class VideoPlayer extends Component {
                         }
                     ]}/>
                 </View>
-                <TouchableWithoutFeedback hitSlop={{top: 10, bottom: 10, right: 10, left: 10}} style={[
+                <View style={[
                         styles.seekbar.handle,
                         { left: this.state.seekerPosition }
                     ]}
@@ -1005,7 +1005,7 @@ export default class VideoPlayer extends Component {
                         styles.seekbar.circle,
                         { backgroundColor: this.props.seekColor || '#FFF' } ]}
                     />
-                </TouchableWithoutFeedback>
+                </View>
             </View>
         );
     }
@@ -1326,8 +1326,8 @@ const styles = {
         handle: {
             position: 'absolute',
             marginLeft: -7,
-            height: 28,
-            width: 28,
+            height: 35,
+            width: 35,
         },
         circle: {
             borderRadius: 12,
