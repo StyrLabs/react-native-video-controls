@@ -982,7 +982,7 @@ export default class VideoPlayer extends Component {
     renderSeekbar() {
 
         return (
-            <View style={ styles.seekbar.container }>
+            <TouchableWithoutFeedback hitSlop={{top: 10, bottom: 10, right: 10, left: 10}} style={ styles.seekbar.container }>
                 <View
                     style={ styles.seekbar.track }
                     onLayout={ event => this.player.seekerWidth = event.nativeEvent.layout.width }
@@ -1007,7 +1007,7 @@ export default class VideoPlayer extends Component {
                         { backgroundColor: this.props.seekColor || '#FFF' } ]}
                     />
                 </View>
-            </View>
+            </TouchableWithoutFeedback>
         );
     }
 
