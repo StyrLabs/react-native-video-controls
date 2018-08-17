@@ -956,7 +956,8 @@ export default class VideoPlayer extends Component {
                     opacity: this.animations.bottomControl.opacity,
                     marginBottom: this.animations.bottomControl.marginBottom,
                 }
-            ]}>
+                
+            ]{ ...this.player.seekPanResponder.panHandlers }}>
                 <ImageBackground
                     source={ require( './assets/img/bottom-vignette.png' ) }
                     style={[ styles.controls.column ]}
@@ -1106,7 +1107,7 @@ export default class VideoPlayer extends Component {
                 onPress={ this.events.onScreenTouch }
                 style={[ styles.player.container, this.styles.containerStyle ]}
             >
-                <View style={[ styles.player.container, this.styles.containerStyle ]} { ...this.player.seekPanResponder.panHandlers }>
+                <View style={[ styles.player.container, this.styles.containerStyle ]}>
                     <Video
                         { ...this.props }
                         ref={ videoPlayer => this.player.ref = videoPlayer }
