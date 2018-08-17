@@ -999,7 +999,7 @@ export default class VideoPlayer extends Component {
                         styles.seekbar.handle,
                         { left: this.state.seekerPosition }
                     ]}
-                    { ...this.player.seekPanResponder.panHandlers }
+
                 >
                     <View style={[
                         styles.seekbar.circle,
@@ -1106,7 +1106,7 @@ export default class VideoPlayer extends Component {
                 onPress={ this.events.onScreenTouch }
                 style={[ styles.player.container, this.styles.containerStyle ]}
             >
-                <View style={[ styles.player.container, this.styles.containerStyle ]}>
+                <View style={[ styles.player.container, this.styles.containerStyle ]} { ...this.player.seekPanResponder.panHandlers }>
                     <Video
                         { ...this.props }
                         ref={ videoPlayer => this.player.ref = videoPlayer }
