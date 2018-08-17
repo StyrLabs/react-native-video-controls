@@ -956,8 +956,8 @@ export default class VideoPlayer extends Component {
                     opacity: this.animations.bottomControl.opacity,
                     marginBottom: this.animations.bottomControl.marginBottom,
                 }
-                
-            ]{ ...this.player.seekPanResponder.panHandlers }}>
+
+            ]}{ ...this.player.seekPanResponder.panHandlers }>
                 <ImageBackground
                     source={ require( './assets/img/bottom-vignette.png' ) }
                     style={[ styles.controls.column ]}
