@@ -733,7 +733,7 @@ export default class VideoPlayer extends Component {
              * When panning, update the seekbar position, duh.
              */
             onPanResponderMove: ( evt, gestureState ) => {
-                const position = (this.props.landscape ? this.state.seekerOffset - gestureState.dy : this.state.seekerOffset + gestureState.dx);
+                const position = this.state.seekerOffset + (this.props.landscape ? gestureState.dy : gestureState.dx);
                 this.setSeekerPosition( position );
             },
 
@@ -776,7 +776,7 @@ export default class VideoPlayer extends Component {
              */
             onPanResponderMove: ( evt, gestureState ) => {
                 let state = this.state;
-                const position = (this.props.landscape ? this.state.volumeOffset - gestureState.dy : this.state.volumeOffset + gestureState.dx);
+                const position = this.state.volumeOffset + (this.props.landscape ? gestureState.dy : gestureState.dx);
 
                 this.setVolumePosition( position );
                 state.volume = this.calculateVolumeFromVolumePosition();
