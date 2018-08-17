@@ -1327,8 +1327,8 @@ const styles = {
         handle: {
             position: 'absolute',
             marginLeft: -7,
-            height: 35,
-            width: 35,
+            height: 25,
+            width: 25,
         },
         circle: {
             borderRadius: 12,
